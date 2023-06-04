@@ -1,14 +1,5 @@
 server:
-  port: 8666
-
-  #
-#  ssl: #开启ssl
-#    enabled: true
-#    key-store: classpath:9925094_www.hqk10.xyz.pfx
-#    key-store-type: PKCS12
-#    key-store-password: fdielsu6
-
-
+  port: 8333
 spring:
   profiles:
     active: dev
@@ -18,34 +9,10 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: service-company
-          uri: lb://service-company
-          predicates:
-            - Path=/company/** # 路径匹配
-        - id: service-company
-          uri: lb://service-company
-          predicates:
-            - Path=/home/** # 路径匹配
         - id: service-common
           uri: lb://service-common
           predicates:
             - Path=/common/** # 路径匹配
-        - id: service-user
-          uri: lb://service-user
-          predicates:
-            - Path=/user/** # 路径匹配
-        - id: service-sms
-          uri: lb://service-sms
-          predicates:
-            - Path=/sms/** # 路径匹配
-        - id: service-oss
-          uri: lb://service-oss
-          predicates:
-            - Path=/oss/** # 路径匹配
-        - id: service-user
-          uri: lb://service-user
-          predicates:
-            - Path=/acl/** # 路径匹配
     nacos:
       discovery:
         server-addr: @nacos.address@

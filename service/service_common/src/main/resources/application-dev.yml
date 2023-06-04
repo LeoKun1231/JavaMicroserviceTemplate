@@ -40,12 +40,16 @@ spring:
   cloud:
     nacos:
       server-addr: @nacos.address@
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
 #mybatis日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:com/hqk/recruitment/common/mapper/xml/*.xml
-  type-aliases-package: com.hqk.recruitment.common.mapper
+  mapper-locations: classpath:com/common/mapper/xml/*.xml
+  type-aliases-package: com.common.mapper
   global-config:
     db-config:
       logic-delete-field: isDeleted

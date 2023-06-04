@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>recruitment_parent</artifactId>
-        <groupId>com.hqk</groupId>
+        <artifactId>shop</artifactId>
+        <groupId>com</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,10 +12,7 @@
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>service_company</module>
         <module>service_common</module>
-        <module>service_sms</module>
-        <module>service_oss</module>
     </modules>
 
     <properties>
@@ -24,17 +21,11 @@
     </properties>
 
     <dependencies>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
         <dependency>
-            <groupId>com.hqk</groupId>
+            <groupId>com</groupId>
             <artifactId>service_utils</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
 
         <!--         服务调用feign -->
         <dependency>
@@ -48,7 +39,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hqk</groupId>
+            <groupId>com</groupId>
             <artifactId>model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -88,12 +79,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--开发者工具-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
+
 
         <!--        测试-->
         <dependency>
@@ -105,15 +91,11 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
         </dependency>
-
-
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
-
-
 
     </dependencies>
 </project>

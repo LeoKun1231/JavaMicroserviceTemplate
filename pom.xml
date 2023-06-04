@@ -9,7 +9,6 @@
         <module>common</module>
         <module>gateway</module>
         <module>service_client</module>
-		<module>service_user</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,8 +16,8 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.hqk</groupId>
-	<artifactId>recruitment_parent</artifactId>
+	<groupId>com</groupId>
+	<artifactId>shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -36,6 +35,7 @@
 		<aliyun.version>4.1.1</aliyun.version>
 		<oss.version>3.9.1</oss.version>
 		<jodatime.version>2.10.1</jodatime.version>
+		<devtools.version>2.7.1</devtools.version>
 	</properties>
 	<build>
 		<plugins>
@@ -64,9 +64,9 @@
 			</activation>
 			<properties>
 				<spring.profiles.active>dev</spring.profiles.active>
-				<nacos.address><!--这里填写nacos地址--></nacos.address>
-				<mysql.address><!--这里填写mysql地址--></mysql.address>
-				<redis.address><!--这里填写redis地址--></redis.address>
+				<nacos.address>localhost:8848</nacos.address>
+				<mysql.address>localhost:3306</mysql.address>
+				<redis.address>localhost:6379</redis.address>
 			</properties>
 		</profile>
 		<profile>
@@ -166,6 +166,11 @@
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
 				<version>${jodatime.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+				<version>${devtools.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
